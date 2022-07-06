@@ -1,0 +1,341 @@
+desc : 彩种的基本配置表
+
+lotterys :
+-
+  gamecode : 1
+  oid : 1 #1是福彩 2是体彩
+  typeid : 1      #低频还是高频 1是低频；2是高频 3是高频自增 4是高频年自增 5竞彩
+  name : 福彩3D     # 彩种的中文名字
+  sname : 福彩3D    # 彩种的中文别名
+  ename : fcsd    # 彩种的英文名字
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday #彩种的开奖星期
+  opentime : 21:15 # 彩种的开奖时间 针对低频彩种,格式:(xx:xx) 例如：21:30
+  state : 0 # 该彩种是否可用
+  islocal : 0 #该彩种是否是本地彩种
+  province :  # 该彩种的所在地
+  formatqi : YYYY,%.3d # 针对高频彩种 配置格式为:YYMMDD,%s%.3d或者YYYYMMDD,%s%.2d等。
+-
+  gamecode : 2
+  oid : 1
+  typeid : 1
+  name : 福彩双色球
+  sname : 双色球
+  ename : fcssq
+  opendate : Tuesday,Thursday,Sunday
+  opentime : 21:15
+  state : 0
+  islocal : 0
+  province :
+  formatqi : YYYY,%.3d
+-
+  gamecode : 3
+  oid : 1
+  typeid : 1
+  name : 福彩七乐彩
+  sname : 七乐彩
+  ename : fcssq
+  opendate : Monday,Wednesday,Friday
+  opentime : 21:15
+  state : 0
+  islocal : 0
+  province :
+  formatqi : YYYY,%.3d
+-
+  gamecode : 4
+  oid : 2
+  typeid : 1
+  name : 体彩排列3
+  sname : 排列3
+  ename : tcp3
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 20:25
+  state : 0
+  islocal : 0
+  province :
+  formatqi : YYYY,%.3d
+-
+  gamecode : 5
+  oid : 2
+  typeid : 1
+  name : 体彩大乐透
+  sname : 大乐透
+  ename : tcdlt
+  opendate : Monday,Wednesday,Saturday
+  opentime : 20:25
+  state : 0
+  islocal : 0
+  province :
+  formatqi : YYYY,%.3d
+-
+  gamecode : 6
+  oid : 2
+  typeid : 1
+  name : 体彩七星彩
+  sname : 七星彩
+  ename : tcqxc
+  opendate : Tuesday,Friday,Sunday
+  opentime : 20:25
+  state : 0
+  islocal : 0
+  province :
+  formatqi : YYYY,%.3d
+-
+  gamecode : 7
+  oid : 2
+  typeid : 1
+  name : 体彩排列5
+  sname : 排列5
+  ename : tcp5
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 20:25
+  state : 0
+  islocal : 0
+  province :
+  formatqi : YYYY,%.3d
+-
+  gamecode : 9
+  oid : 1
+  typeid : 1
+  name : 好彩1
+  sname : 好彩1
+  ename : fcgdhc1
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 20:00
+  state : 0
+  islocal : 1
+  province : guangdong
+  formatqi : YYYY,%.3d
+-
+  gamecode : 10
+  oid : 1
+  typeid : 1
+  name : 东方6+1
+  sname : 东方6+1
+  ename : fcdf61
+  opendate : Monday,Wednesday,Saturday
+  opentime : 20:45
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d
+-
+  gamecode : 11
+  oid : 1
+  typeid : 1
+  name : 福彩华东15选5
+  sname : 华东15选5
+  ename : fchd15x5
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 21:00
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d
+-
+  gamecode : 13
+  oid : 1
+  typeid : 1
+  name : 体彩江苏7位数
+  sname : 江苏7位数
+  ename : tcjs7ws
+  opendate : Tuesday,Thursday,Friday,Sunday
+  opentime : 21:00
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d
+-
+  gamecode : 14
+  oid : 1
+  typeid : 1
+  name : 体彩浙江6+1
+  sname : 浙江6+1
+  ename : tczj61
+  opendate : Tuesday,Friday,Sunday
+  opentime : 22:45
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 15
+  oid : 1
+  typeid : 1
+  name : 体彩福建31选1
+  sname : 福建31选7
+  ename : tcfj31x7
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 21:30
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 16
+  oid : 1
+  typeid : 1
+  name : 彩福建36选7
+  sname : 福建36选7
+  ename : tcfj36x7
+  opendate : Tuesday,Thursday,Saturday
+  opentime : 21:30
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 17
+  oid : 1
+  typeid : 1
+  name : 福彩河南22选5
+  sname : 河南22选5
+  ename : fchn22x5
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 22:00
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 18
+  oid : 1
+  typeid : 1
+  name : 福彩湖北22选5
+  sname : 湖北22选5
+  ename : fchb22x5
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 20:30
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 19
+  oid : 1
+  typeid : 1
+  name : 福彩新疆35选7
+  sname : 新疆35选7
+  ename : fcxj35x7
+  opendate :  Monday,Friday
+  opentime : 21:00
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 20
+  oid : 1
+  typeid : 1
+  name : 福彩南粤36选7
+  sname : 南粤36选7
+  ename : fcny36x7
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 21:54
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 21
+  oid : 1
+  typeid : 1
+  name : 福彩湖北30选5
+  sname : 湖北30选5
+  ename : fchb30x5
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 21:54
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 22
+  oid : 1
+  typeid : 1
+  name : 福彩黑龙江P62
+  sname : 福彩黑龙江P62
+  ename : fchljp62
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 22:30
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 23
+  oid : 1
+  typeid : 1
+  name : 体彩黑龙江6+1
+  sname : 体彩黑龙江6+1
+  ename : fchljp62
+  opendate : Tuesday,Friday
+  opentime : 22:00
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 24
+  oid : 1
+  typeid : 1
+  name : 体彩浙江20选5
+  sname : 体彩浙江20选5
+  ename : fchljp62
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 21:50
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 25
+  oid : 1
+  typeid : 1
+  name : 体彩福建22选5
+  sname : 体彩福建22选5
+  ename : tcfj22x5
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 20:50
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 26
+  oid : 1
+  typeid : 1
+  name : 福彩广西快乐双彩
+  sname : 福彩广西快乐双彩
+  ename : fcgxklsc
+  opendate : Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 22:00
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 27
+  oid : 1
+  typeid : 1
+  name : 福彩新疆25选7
+  sname : 福彩新疆25选7
+  ename : fcxj25x7
+  opendate : Monday,Friday
+  opentime : 21:00
+  state : 0
+  islocal : 1
+  province :
+  formatqi : YYYY,%.3d  
+-
+  gamecode : 38
+  oid : 1
+  typeid : 1
+  name : 福彩快乐8
+  sname : 福彩快乐8
+  ename : fckl8
+  opendate :  Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+  opentime : 21:30
+  state : 0
+  islocal : 0
+  province :
+  formatqi : YYYY,%.3d

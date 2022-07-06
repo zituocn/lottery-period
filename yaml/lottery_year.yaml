@@ -1,0 +1,64 @@
+desc : 每年的配置放假等配置
+
+years :
+-
+  id : 1
+  year : 2016
+  selist : 
+    - 
+      stime : "2016-02-07"
+      etime : "2016-02-14"
+-
+  id : 1
+  year : 2017
+  selist : 
+    - 
+      stime : "2017-01-27"
+      etime : "2017-02-03"
+-
+  id : 1
+  year : 2018
+  selist : 
+    - 
+      stime : "2018-02-15"
+      etime : "2018-02-22"
+-
+  id : 2
+  year : 2019
+  selist : 
+    - 
+      stime : "2019-02-04" #开始停的时间
+      etime : "2019-02-11" #开始开的时间
+    - 
+      stime : "2019-10-01"
+      etime : "2019-10-08"
+-
+  id : 3
+  year : 2020
+  selist : 
+    - 
+      stime : "2020-01-22"
+      etime : "2020-03-11"
+    - 
+      stime : "2020-10-01"
+      etime : "2020-10-05"
+-
+  id : 4
+  year : 2021
+  selist : 
+    - 
+      stime : "2021-02-09"
+      etime : "2021-02-19"
+    - 
+      stime : "2021-10-01"
+      etime : "2021-10-05"
+-
+  id : 5
+  year : 2022
+  selist :
+    -
+      stime : "2022-01-29"
+      etime : "2022-02-08"
+    -
+      stime : "2022-10-01"
+      etime : "2022-10-05"
