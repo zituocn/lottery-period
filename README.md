@@ -30,6 +30,13 @@ go build
 ```
 
 
+## docker 安装
+
+```sh
+docker pull gkzy/lottery-period
+docker run -itd --restart=always --name lottery-period -p 8080:8080  gkzy/lottery-period 
+```
+
 
 ## API路由
 
