@@ -56,17 +56,32 @@ func GetOneByPeriod(c *gow.Context) {
 	JSON(c, convertItem(result))
 }
 
-func convertItem(item *models.Result) *models.ViewResult {
-	if item != nil {
-		return &models.ViewResult{
-			Period: item.Period,
-			At:     time.Unix(item.At, 0).Format(format),
-			Et:     time.Unix(item.Et, 0).Format(format),
-			Bt:     time.Unix(item.Bt, 0).Format(format),
-		}
+// GetList 包含当前期数的小列表
+func GetList(c *gow.Context) {
+	gamecode, _ := c.GetInt("gamecode", 0)
+	ts, _ := c.GetInt64("ts", 0)
+	limit, _ := c.GetInt("limit", 0)
+
+	if ts < 1 {
+		ts = time.Now().Unix()
+	}
+	result, data, err := new(service.Low).GetList(gamecode, ts, limit)
+	if err != nil {
+		JSON(c, 1, err.Error())
+		return
 	}
 
-	return nil
+	list := make([]*models.ViewResult, 0, len(data))
+
+	for _, item := range data {
+		list = append(list, convertItem(item))
+	}
+
+	vrs := &models.ViewResults{
+		Now:     convertItem(result),
+		Recents: list,
+	}
+	JSON(c, vrs)
 }
 
 func Today(c *gow.Context) {
@@ -91,4 +106,21 @@ func Year(c *gow.Context) {
 func YearYaml(c *gow.Context) {
 	data, _ := new(models.LotteryYear).GetLotteryYearList()
 	c.YAML(data)
+}
+
+/*
+private
+*/
+
+func convertItem(item *models.Result) *models.ViewResult {
+	if item != nil {
+		return &models.ViewResult{
+			Period: item.Period,
+			At:     time.Unix(item.At, 0).Format(format),
+			Et:     time.Unix(item.Et, 0).Format(format),
+			Bt:     time.Unix(item.Bt, 0).Format(format),
+		}
+	}
+
+	return nil
 }

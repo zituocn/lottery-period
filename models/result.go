@@ -15,3 +15,9 @@ type ViewResult struct {
 	Et     string `json:"et"`     //停售时间
 	At     string `json:"at"`     //开奖时间
 }
+
+// ViewResults 小列表
+type ViewResults struct {
+	Now     *ViewResult   `json:"now"`
+	Recents []*ViewResult `json:"recents"`
+}

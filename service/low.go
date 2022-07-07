@@ -17,7 +17,8 @@ const (
 type Low struct{}
 
 // GetOneByPeriod 根据彩种和期数获取数据
-//
+//	gamecode  彩种
+//	period 	  期数
 func (m *Low) GetOneByPeriod(gamecode int, period int64) (result *models.Result, err error) {
 	var (
 		year int
@@ -101,6 +102,45 @@ func (m *Low) GetOneByTime(gamecode int, ts int64, typeid int) (result *models.R
 				result = data[i+1]
 				return
 			}
+		}
+	}
+	return
+}
+
+// GetList 获取一个与当前期相关的小列表
+func (m *Low) GetList(gamecode int, ts int64, limit int) (result *models.Result, list []*models.Result, err error) {
+	lotteryGame, err := new(models.LotteryGame).GetLotteryGame(gamecode)
+	if err != nil {
+		return
+	}
+
+	if limit < 1 {
+		limit = 10
+	}
+	if limit > 30 {
+		limit = 30
+	}
+
+	dt := time.Unix(ts, 0)
+	year := dt.Year()
+
+	data, err := m.GetCompleteList(lotteryGame, year)
+	if err != nil {
+		return
+	}
+
+	list = make([]*models.Result, 0)
+
+	for index, item := range data {
+		if item.At-ts >= 0 {
+			result = item
+			for xx := -limit; xx <= 0; xx++ {
+				if index+xx < 0 {
+					continue
+				}
+				list = append(list, data[index+xx])
+			}
+			break
 		}
 	}
 	return
